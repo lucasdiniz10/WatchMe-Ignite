@@ -7,13 +7,13 @@ import { api } from './services/api';
 
 import './styles/global.scss';
 
-interface GenreResponseProps {
+export interface GenreResponseProps {
   id: number;
   name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
   title: string;
 }
 
-interface MovieProps {
+export interface MovieProps {
   imdbID: string;
   Title: string;
   Poster: string;
@@ -54,8 +54,15 @@ export function App() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <SideBar genres={genres} handleClickButton={handleClickButton} selectedGenreId={selectedGenreId} />
-      <Content titleGender={selectedGenre.title} movies={movies} />
+      <SideBar
+        genres={genres}
+        handleClickButton={handleClickButton}
+        selectedGenreId={selectedGenreId}
+      />
+      <Content
+        titleGender={selectedGenre.title}
+        movies={movies}
+      />
     </div>
   )
 }

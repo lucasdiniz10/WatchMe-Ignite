@@ -1,11 +1,7 @@
 import { Button } from "./Button";
 import '../styles/sidebar.scss';
 
-interface GenreResponseProps {
-  id: number;
-  name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
-  title: string;
-}
+import { GenreResponseProps } from "../App";
 
 interface SideBarProps {
   genres: GenreResponseProps[],
